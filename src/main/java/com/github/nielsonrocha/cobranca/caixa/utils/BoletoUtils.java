@@ -1,4 +1,4 @@
-package com.github.nielsonrocha.cobranca.utils;
+package com.github.nielsonrocha.cobranca.caixa.utils;
 
 import java.io.File;
 import java.io.IOException;

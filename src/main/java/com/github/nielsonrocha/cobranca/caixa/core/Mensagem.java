@@ -1,4 +1,4 @@
-package com.github.nielsonrocha.cobranca.core;
+package com.github.nielsonrocha.cobranca.caixa.core;
 
 import java.io.Serializable;
 
@@ -13,13 +13,10 @@ import lombok.Setter;
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 @Getter @Setter
-public class BaixaBoleto implements Serializable {
+public class Mensagem implements Serializable {
 
-	private static final long serialVersionUID = -2275698560231415364L;
-
-	@XmlElement(namespace="", name="CODIGO_BENEFICIARIO")
-	private Integer codigoBeneficiario;
+	private static final long serialVersionUID = 3993973813921883890L;
 	
-	@XmlElement(namespace="", name="NOSSO_NUMERO")
-	private Long nossoNumero;
+	@XmlElement(namespace="", name="MENSAGEM")
+	private String mensagem;
 }

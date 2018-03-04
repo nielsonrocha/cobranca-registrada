@@ -1,6 +1,7 @@
-package com.github.nielsonrocha.cobranca.core;
+package com.github.nielsonrocha.cobranca.caixa.core;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -13,10 +14,10 @@ import lombok.Setter;
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 @Getter @Setter
-public class Mensagem implements Serializable {
+public class Descontos implements Serializable {
 
-	private static final long serialVersionUID = 3993973813921883890L;
-	
-	@XmlElement(namespace="", name="MENSAGEM")
-	private String mensagem;
+	private static final long serialVersionUID = 8345660378017925342L;
+
+	@XmlElement(namespace="", name="DESCONTO")
+	private List<Desconto> desconto;
 }

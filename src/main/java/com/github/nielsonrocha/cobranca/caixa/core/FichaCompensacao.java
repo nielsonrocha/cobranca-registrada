@@ -1,4 +1,4 @@
-package com.github.nielsonrocha.cobranca.core;
+package com.github.nielsonrocha.cobranca.caixa.core;
 
 import java.io.Serializable;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.github.nielsonrocha.cobranca.core;
+package com.github.nielsonrocha.cobranca.caixa.core;
 
 import java.io.Serializable;
 
@@ -10,17 +10,17 @@ import javax.xml.bind.annotation.XmlRootElement;
 import lombok.Getter;
 import lombok.Setter;
 
-@XmlRootElement(name="SERVICO_ENTRADA")
+@XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 @Getter @Setter
-public class ServicoEntrada implements Serializable {
+public class IncluiBoleto implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-
-	@XmlElement(name="HEADER")
-	private Header header;
 	
-	@XmlElement(namespace="", name="DADOS")
-	private Dados dados;
+	@XmlElement(namespace="", name="CODIGO_BENEFICIARIO")
+	private Integer codigoBeneficiario;
+	
+	@XmlElement(namespace="", name="TITULO")
+	private Titulo titulo;
 
 }

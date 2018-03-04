@@ -1,4 +1,4 @@
-package com.github.nielsonrocha.cobranca.core;
+package com.github.nielsonrocha.cobranca.caixa.core;
 
 import java.io.Serializable;
 
@@ -13,12 +13,22 @@ import lombok.Setter;
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 @Getter @Setter
-public class Desconto implements Serializable {
+public class JurosMora implements Serializable {
 
 	private static final long serialVersionUID = 941361905518104264L;
+	
+	public JurosMora() {
+	}
 
-	@XmlElement(namespace="", name="PERCENTUAL")
-	private String percentual;
+	public JurosMora(String tipo, String data, String valor) {
+		this.tipo = tipo;
+		this.data = data;
+		this.valor = valor;
+	}
+
+
+	@XmlElement(namespace="", name="TIPO")
+	private String tipo;
 	
 	@XmlElement(namespace="", name="DATA")
 	private String data;

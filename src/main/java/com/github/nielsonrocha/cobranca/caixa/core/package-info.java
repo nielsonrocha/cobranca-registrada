@@ -17,7 +17,7 @@
     }
 )
 //@javax.xml.bind.annotation.XmlSchema(namespace = "http://caixa.gov.br/sibar")
-package com.github.nielsonrocha.cobranca.core;
+package com.github.nielsonrocha.cobranca.caixa.core;
 
 import javax.xml.bind.annotation.XmlNs;
 import javax.xml.bind.annotation.XmlNsForm;

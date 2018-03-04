@@ -1,4 +1,4 @@
-package com.github.nielsonrocha.cobranca.soap;
+package com.github.nielsonrocha.cobranca.caixa.soap;
 
 public enum Operacao {
 

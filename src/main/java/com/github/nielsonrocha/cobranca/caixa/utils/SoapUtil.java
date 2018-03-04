@@ -1,4 +1,4 @@
-package com.github.nielsonrocha.cobranca.utils;
+package com.github.nielsonrocha.cobranca.caixa.utils;
 
 import java.io.ByteArrayInputStream;
 import java.io.StringWriter;
@@ -17,7 +17,7 @@ import javax.xml.transform.stream.StreamResult;
 
 import org.w3c.dom.Document;
 
-import com.github.nielsonrocha.cobranca.soap.Operacao;
+import com.github.nielsonrocha.cobranca.caixa.soap.Operacao;
 
 public class SoapUtil {
 

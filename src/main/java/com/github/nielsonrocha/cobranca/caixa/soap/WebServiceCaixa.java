@@ -1,6 +1,6 @@
-package com.github.nielsonrocha.cobranca.soap;
+package com.github.nielsonrocha.cobranca.caixa.soap;
 
-import static com.github.nielsonrocha.cobranca.utils.SoapUtil.*;
+import static com.github.nielsonrocha.cobranca.caixa.utils.SoapUtil.*;
 
 public class WebServiceCaixa {
 	
