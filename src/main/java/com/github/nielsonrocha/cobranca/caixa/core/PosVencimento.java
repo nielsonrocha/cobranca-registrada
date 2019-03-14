@@ -7,12 +7,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-import lombok.Getter;
-import lombok.Setter;
+import com.github.nielsonrocha.cobranca.caixa.core.enums.Acao;
+
+import lombok.Data;
 
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
-@Getter @Setter
+@Data
 public class PosVencimento implements Serializable {
 	
 	private static final long serialVersionUID = -4464300212111149305L;
@@ -20,8 +21,8 @@ public class PosVencimento implements Serializable {
 	public PosVencimento() {
 	}
 
-	public PosVencimento(String acao, String numeroDias) {
-		this.acao = acao;
+	public PosVencimento(Acao acao, String numeroDias) {
+		this.acao = acao.toString();
 		this.numeroDias = numeroDias;
 	}
 

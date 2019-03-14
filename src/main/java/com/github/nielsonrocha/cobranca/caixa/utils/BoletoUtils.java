@@ -47,6 +47,19 @@ public class BoletoUtils {
 			return null;
 		}
 	}
+	
+	public static String formataDataBanco(Date data) {
+		try {
+			if (data != null) {
+				SimpleDateFormat df = new SimpleDateFormat("ddMMyyyy", BRAZIL);
+				return df.format(data);
+			} else {
+				return null;
+			}
+		} catch (Exception e) {
+			return null;
+		}
+	}
 
 	public static String encryptBase64(String string) {
 		try {

@@ -7,12 +7,11 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
-@Getter @Setter
+@Data
 public class JurosMora implements Serializable {
 
 	private static final long serialVersionUID = 941361905518104264L;
@@ -20,10 +19,11 @@ public class JurosMora implements Serializable {
 	public JurosMora() {
 	}
 
-	public JurosMora(String tipo, String data, String valor) {
+	public JurosMora(String tipo, String data, String valor, String percentual) {
 		this.tipo = tipo;
 		this.data = data;
 		this.valor = valor;
+		this.percentual = percentual;
 	}
 
 
@@ -35,4 +35,7 @@ public class JurosMora implements Serializable {
 	
 	@XmlElement(namespace="", name="VALOR")
 	private String valor;
+	
+	@XmlElement(namespace="", name="PERCENTUAL")
+	private String percentual;
 }

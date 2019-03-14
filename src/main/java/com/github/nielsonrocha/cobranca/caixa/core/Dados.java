@@ -9,10 +9,11 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 @XmlRootElement(namespace="")
 @XmlAccessorType(XmlAccessType.FIELD)
-@Getter @Setter
+@Getter @Setter @ToString
 public class Dados implements Serializable {
 
 	private static final long serialVersionUID = 5780606368112755108L;
@@ -28,4 +29,13 @@ public class Dados implements Serializable {
 	
 	@XmlElement(namespace="", name="CONSULTA_BOLETO")
 	private ConsultaBoleto consultaBoleto;
+	
+	@XmlElement(namespace="", name="CONTROLE_NEGOCIAL")
+	private ControleNegocial controleNeogical;
+	
+	@XmlElement(namespace="", name="COMPROVANTE")
+	private Comprovante comprovante;
+	
+	@XmlElement(namespace="", name="EXCECAO")
+	private String excecao;
 }

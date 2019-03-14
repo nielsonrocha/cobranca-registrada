@@ -7,12 +7,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-import lombok.Getter;
-import lombok.Setter;
+import com.github.nielsonrocha.cobranca.caixa.core.enums.TipoPagamento;
+
+import lombok.Data;
 
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
-@Getter @Setter
+@Data
 public class Pagamento implements Serializable {
 	
 	private static final long serialVersionUID = 2696785082633484495L;
@@ -21,7 +22,7 @@ public class Pagamento implements Serializable {
 	private Integer quantidadePermitida;
 	
 	@XmlElement(namespace="", name="TIPO")
-	private String tipo;
+	private TipoPagamento tipo;
 	
 	@XmlElement(namespace="", name="VALOR_MINIMO")
 	private String valorMinimo;

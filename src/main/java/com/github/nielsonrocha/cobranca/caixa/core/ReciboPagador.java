@@ -8,12 +8,11 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
-@Getter @Setter
+@Data
 public class ReciboPagador implements Serializable {
 
 	private static final long serialVersionUID = 7339703223344200981L;

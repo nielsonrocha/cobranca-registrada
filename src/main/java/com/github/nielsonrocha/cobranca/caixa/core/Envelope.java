@@ -9,10 +9,11 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 @XmlRootElement(name="Envelope",namespace="http://schemas.xmlsoap.org/soap/envelope/")
 @XmlAccessorType(XmlAccessType.FIELD)
-@Getter @Setter
+@Getter @Setter @ToString
 public class Envelope implements Serializable {
 
 	private static final long serialVersionUID = -3821619287386781295L;

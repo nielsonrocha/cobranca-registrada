@@ -9,10 +9,11 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
-@Getter @Setter
+@Getter @Setter @ToString
 public class Body implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -22,5 +23,11 @@ public class Body implements Serializable {
 	
 	@XmlElement(name="SERVICO_ENTRADA", namespace="http://caixa.gov.br/sibar/consulta_cobranca_bancaria/boleto")
 	private ServicoEntrada servicoEntradaConsulta;
+	
+	@XmlElement(name="SERVICO_SAIDA", namespace="http://caixa.gov.br/sibar/manutencao_cobranca_bancaria/boleto/externo")
+	private ServicoSaida servicoSaida;
+	
+	@XmlElement(name="SERVICO_SAIDA", namespace="http://caixa.gov.br/sibar/consulta_cobranca_bancaria/boleto")
+	private ServicoSaida servicoSaidaConsulta;
 	
 }

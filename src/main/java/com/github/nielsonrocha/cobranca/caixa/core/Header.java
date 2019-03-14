@@ -9,10 +9,11 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
-@Getter @Setter
+@Getter @Setter @ToString
 public class Header implements Serializable {
 
 	private static final long serialVersionUID = -4802892638191641783L;

@@ -7,16 +7,25 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
-@Getter @Setter
+@Data
 public class Multa implements Serializable {
 
 	private static final long serialVersionUID = 941361905518104264L;
+	
+	public Multa() {
+		
+	}
 
+	public Multa(String data, String valor, String percentual) {
+		this.data = data;
+		this.valor = valor;
+		this.percentual = percentual;
+	}
+	
 	@XmlElement(namespace="", name="PERCENTUAL")
 	private String percentual;
 	
@@ -25,4 +34,5 @@ public class Multa implements Serializable {
 	
 	@XmlElement(namespace="", name="VALOR")
 	private String valor;
+	
 }
